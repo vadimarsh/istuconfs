@@ -6,7 +6,7 @@
 async function getUsers() {
 	let url = 'https://open.istu.edu/api/get_all_events.php';
 	
-	..let url = 'https://api.github.com/repos/vadimarsh/WorkWithVolfram/commits';
+	//let url = 'https://api.github.com/repos/vadimarsh/WorkWithVolfram/commits';
 	//let url = 'https://covid19-api.org/api/status/UA';
 	
 	let response = await fetch(url);
