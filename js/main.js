@@ -5,7 +5,7 @@
 })
 async function getUsers() {
 	let url = 'https://open.istu.edu/api/get_all_events.php';	
-	let response = await fetch(url);
+	let response = await fetch(url, {mode: "no-cors"});
 	let jsonFromServer =await response.json();
 	for (let value of Object.values(jsonFromServer['0'])) {
 	alert(value); // John, затем 30
