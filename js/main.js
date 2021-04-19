@@ -4,11 +4,7 @@
 	template: '<div class="event"><img class="event__img" src="img/event-logo.gif"> <h2 class="event__title">{{event.title}}</h2> <p class="event__text">Организатор: {{event.organizators}}</p></div>'
 })
 async function getUsers() {
-	let url = 'https://open.istu.edu/api/get_all_events.php';
-	
-	//let url = 'https://api.github.com/repos/vadimarsh/WorkWithVolfram/commits';
-	//let url = 'https://covid19-api.org/api/status/UA';
-	
+	let url = 'https://open.istu.edu/api/get_all_events.php';	
 	let response = await fetch(url);
 	let jsonFromServer =await response.json();
 	for (let value of Object.values(jsonFromServer['0'])) {
