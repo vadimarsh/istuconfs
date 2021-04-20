@@ -7,8 +7,8 @@ async function getUsers() {
 	let url = 'https://open.istu.edu/api/get_all_events.php';	
 	let response = await fetch(url);
 	let jsonFromServer = await response.json();
-	for (let value of Object.values(jsonFromServer['0'])) {
-	alert(value); // John, затем 30
+	//for (let value of Object.values(jsonFromServer['0'])) {
+	alert(value[0]); // John, затем 30
 }
 //alert(Object.keys(jsonFromServer['0']));
 	return jsonFromServer;
