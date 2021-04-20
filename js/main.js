@@ -12,10 +12,10 @@ async function getUsers() {
 	for(var i = 0; i < jsonFromServer.length; i++) {
     
 	resultat[i] = jsonFromServer[i];
-	
+	console.log(resultat[i]);
 }
 //	for (let value of Object.values(jsonFromServer['0'])) {
-alert(resultat[0][fullname]);	
+console.log(resultat[0][fullname]);
 //print(resultat[0]);
 	//alert(value);
 //	}
