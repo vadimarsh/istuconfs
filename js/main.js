@@ -8,11 +8,12 @@ async function getUsers() {
 	let response = await fetch(url);
 	let jsonFromServer = await response.json();
 	let resultat = [];
-	alert(jsonFromServer.length);
+	
 	for(var i = 0; i < jsonFromServer.length; i++) {
     
 	resultat[i] = jsonFromServer[i];
-	console.log(resultat[i].fullname);
+	resultat[i].id = i;
+	console.log(resultat[i]);
 }
 //	for (let value of Object.values(jsonFromServer['0'])) {
 //console.log(resultat[0][fullname]);
