@@ -16,13 +16,7 @@ async function getUsers() {
 	}
 	console.log(resultat);
 	
-	let jsonFromServer1 = [
-			{ id: 0, title: 'International STEM Olympiad', organizators: 'Дарима Доржиева' },
-			{ id: 1, title: 'Инженерная олимпиада для студентов и выпускников', organizators: 'Никита Лукьянов' },
-			{ id: 2, title: 'Компьютериада - 2021', organizators: 'Никита Лукьянов' },
-			{ id: 3, title: 'Олимпиада для школьников по правоведению', organizators: 'Юлия Герасимова' }
-		];
-	console.log(jsonFromServer1);
+	
 		
 		
 
@@ -34,6 +28,14 @@ async function getUsers() {
 //alert(Object.keys(jsonFromServer['0']));
 	return resultat;
 }
+
+let jsonFromServer1 = [
+			{ id: 0, title: 'International STEM Olympiad', organizators: 'Дарима Доржиева' },
+			{ id: 1, title: 'Инженерная олимпиада для студентов и выпускников', organizators: 'Никита Лукьянов' },
+			{ id: 2, title: 'Компьютериада - 2021', organizators: 'Никита Лукьянов' },
+			{ id: 3, title: 'Олимпиада для школьников по правоведению', organizators: 'Юлия Герасимова' }
+		];
+	console.log(jsonFromServer1);
 /*
 let jsonFromServer = [
 			{ id: 0, title: 'International STEM Olympiad', organizators: 'Дарима Доржиева' },
@@ -45,7 +47,7 @@ let jsonFromServer = [
 var app = new Vue({
 	el: '#events',
 	data: {
-		eventsList: getUsers()
+		eventsList: jsonFromServer1
 	}
 })
 
