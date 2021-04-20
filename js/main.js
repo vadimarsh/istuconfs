@@ -13,7 +13,7 @@ async function getUsers() {
     
 	resultat[i] = jsonFromServer[i];
 	resultat[i].id = i;
-	console.log(resultat[i]);
+	console.log(resultat);
 }
 //	for (let value of Object.values(jsonFromServer['0'])) {
 //console.log(resultat[0][fullname]);
