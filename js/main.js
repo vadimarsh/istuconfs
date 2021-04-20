@@ -1,18 +1,18 @@
+async function getUsers() {
+	let url = 'https://open.istu.edu/api/get_all_events.php';	
+	let response = await fetch(url);
+	var jsonFromServer = await response.json();
+	//for (let value of Object.values(jsonFromServer['0'])) {
+	alert(jsonFromServer[0]); // John, затем 30
 
+//alert(Object.keys(jsonFromServer['0']));
+	return jsonFromServer;
+}
 	Vue.component('event-item', {
 	props: ['event'],
 	template: '<div class="event"><img class="event__img" src="img/event-logo.gif"> <h2 class="event__title">{{event.title}}</h2> <p class="event__text">Организатор: {{event.organizators}}</p></div>'
 })
-async function getUsers() {
-	let url = 'https://open.istu.edu/api/get_all_events.php';	
-	let response = await fetch(url);
-	let jsonFromServer = await response.json();
-	//for (let value of Object.values(jsonFromServer['0'])) {
-	alert(value[0]); // John, затем 30
-}
-//alert(Object.keys(jsonFromServer['0']));
-	return jsonFromServer;
-}
+
 /*
 let jsonFromServer = [
 			{ id: 0, title: 'International STEM Olympiad', organizators: 'Дарима Доржиева' },
