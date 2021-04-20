@@ -1,17 +1,22 @@
 
 	Vue.component('event-item', {
 	props: ['event'],
-	template: '<div class="event"><img class="event__img" src="img/event-logo.gif"> <h2 class="event__title">{{event.title}}</h2> <p class="event__text">Организатор: {{event.organizators}}</p></div>'
+	template: '<div class="event"><img class="event__img" src="img/event-logo.gif"> <h2 class="event__title">{{event.fullname}}</h2> <p class="event__text">Организатор: {{event.organizers}}</p></div>'
 })
 async function getUsers() {
 	let url = 'https://open.istu.edu/api/get_all_events.php';	
 	let response = await fetch(url);
 	let jsonFromServer = await response.json();
-	for (let value of Object.values(jsonFromServer['0'])) {
-	alert(value);
-	}
+	let resultat = [];
+	for(var i = 0; i < jsonFromServer.length; i++) {
+    resultat[i] = jsonFromServer[i];
+}
+//	for (let value of Object.values(jsonFromServer['0'])) {
+	
+	//alert(value);
+//	}
 //alert(Object.keys(jsonFromServer['0']));
-	return jsonFromServer;
+	return resultat;
 }
 /*
 let jsonFromServer = [
