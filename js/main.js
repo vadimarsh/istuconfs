@@ -29,12 +29,7 @@ async function getUsers() {
 	return resultat;
 }
 
-let jsonFromServer1 = [
-			{ id: 0, title: 'International STEM Olympiad', organizators: 'Дарима Доржиева' },
-			{ id: 1, title: 'Инженерная олимпиада для студентов и выпускников', organizators: 'Никита Лукьянов' },
-			{ id: 2, title: 'Компьютериада - 2021', organizators: 'Никита Лукьянов' },
-			{ id: 3, title: 'Олимпиада для школьников по правоведению', organizators: 'Юлия Герасимова' }
-		];
+var jsonFromServer1 = getUsers();
 	console.log(jsonFromServer1);
 /*
 let jsonFromServer = [
