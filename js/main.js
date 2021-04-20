@@ -15,8 +15,8 @@ async function getUsers() {
 	
 }
 //	for (let value of Object.values(jsonFromServer['0'])) {
-alert(resultat.length);	
-print(resultat[0]);
+alert(resultat[0][fullname]);	
+//print(resultat[0]);
 	//alert(value);
 //	}
 //alert(Object.keys(jsonFromServer['0']));
