@@ -41,7 +41,7 @@ let jsonFromServer = [
 var app = new Vue({
 	el: '#events',
 	data: {
-		eventsList: [];
+		eventsList: []
 	},
 	created(){
 	axios.get('https://open.istu.edu/api/get_all_events.php').then(responce => console.log(responce));
