@@ -29,8 +29,7 @@ async function getUsers() {
 	return resultat;
 }
 
-var jsonFromServer1 = getUsers();
-	console.log(jsonFromServer1);
+
 /*
 let jsonFromServer = [
 			{ id: 0, title: 'International STEM Olympiad', organizators: 'Дарима Доржиева' },
@@ -42,7 +41,11 @@ let jsonFromServer = [
 var app = new Vue({
 	el: '#events',
 	data: {
-		eventsList: jsonFromServer1
+		eventsList: [];
+	},
+	created(){
+	axios.get('https://open.istu.edu/api/get_all_events.php').then(responce => console.log(responce));
+	
 	}
 })
 
