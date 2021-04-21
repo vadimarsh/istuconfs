@@ -44,7 +44,7 @@ var app = new Vue({
 		eventsList: []
 	},
 	created(){
-	axios.get('https://open.istu.edu/api/get_all_events.php').then(responce => console.log(responce));
+	axios.get('https://open.istu.edu/api/get_all_events.php').then(responce => this.eventsList =responce.data);
 	
 	}
 })
